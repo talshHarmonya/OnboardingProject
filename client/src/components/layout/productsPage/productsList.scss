@@ -1,0 +1,28 @@
+.products {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    .list {
+        margin: 1.2rem;
+        height: 70vh;
+        width: 80vw;
+        overflow-y: scroll;
+      }
+      
+      .list-item {
+        color:rgb(245, 237, 237);
+        box-sizing: border-box;
+        align-items: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .selected {
+        background-color: rgb(136, 161, 136);
+        border-radius: 1.2rem;
+    }
+}
