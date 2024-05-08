@@ -25,7 +25,7 @@ export function ProductsList(props: Props) {
 
     const renderItem = useCallback((rowIndex: number) => {
         if (filteredProducts && filteredProducts[rowIndex]) {
-            let className = selectedId === filteredProducts[rowIndex].id ? "selected" : "list-item"
+            const className = selectedId === filteredProducts[rowIndex].id ? "selected" : "list-item"
 
             return (
                 <div className={className} onClick={() => {handleProductSelection(filteredProducts[rowIndex].id)}}>

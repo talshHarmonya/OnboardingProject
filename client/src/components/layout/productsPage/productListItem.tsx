@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Product } from '../../../models/product';
 import './productListItem.scss';
@@ -10,9 +10,13 @@ type productListItemProps = {
 export function ProductListItem(props: productListItemProps) {
   const [showItem, setShowItem] = useState(false);
 
-  setTimeout(() => {
-    setShowItem(true)
-  }, 300)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowItem(true);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   const nodeRef = useRef(null);
   
